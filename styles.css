@@ -1,0 +1,146 @@
+/* Reset some default styles */
+body, h1, h2 {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Apply a black background and set text color */
+body {
+    background-color: #2f4454;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Style the header */
+header {
+    background-color: #2e151b;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Add an animation to the header */
+.header-content h1 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style the intro section */
+#intro {
+    padding: 40px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.attractive-paragraph {
+    font-size: 16px;
+    line-height: 1.6;
+    color: white; /* Set the text color */
+    padding: 10px 20px; /* Add some padding for space around the text */
+}
+
+
+
+.content {
+    flex: 1;
+    padding: 20px;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.illustration {
+    flex: 1;
+    text-align: center;
+    animation: fadeInRight 1s;
+    position: relative;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 1; /* Adjust the opacity of the main image */
+    margin-top: 40px; /* Add margin at the top to lower the image */
+    border: 2px solid #ccc; /* Add a border around the image */
+    border-radius: 10px; /* Add rounded corners */
+}
+
+
+/* Add an animation to the image */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Style the footer */
+footer {
+    background-color: #2e151b;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    animation: fadeInUp 1s;
+}
+
+/* Add an animation to the footer */
+footer p {
+    animation: fadeIn 1s;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content, .illustration {
+        flex: none;
+        width: 100%;
+    }
+}

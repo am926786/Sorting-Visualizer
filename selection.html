@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection Sort Visualizer</title>
+    <link rel="stylesheet" href="sort.css">
+    <link rel="stylesheet" href="dt.css"> 
+</head>
+<body>
+    <h1>Selection Sort Visualizer</h1>
+    
+    <!-- Information about Selection Sort -->
+    <div class="info">
+        <h2>About Selection Sort</h2>
+        <p>
+            Selection Sort is a simple comparison-based sorting algorithm. It divides the input array into two parts: 
+            the sorted part and the unsorted part. It repeatedly selects the minimum element from the unsorted part 
+            and moves it to the end of the sorted part.
+        </p>
+    </div>
+
+    <div class="button-container">
+        <button id="sortButton">Sort</button>
+        <button id="generateButton">Generate Random Array</button>
+        <button id="speedButton">Increase Speed</button>
+    </div>
+    <div class="array-container" id="arrayContainer"></div>
+    
+    <!-- Code snippets in different languages -->
+    <div class="code-section">
+        <h2>Code Examples</h2>
+        
+        <!-- JavaScript -->
+        <div class="code">
+            <h3>JavaScript</h3>
+            <pre>
+                <code class="language-javascript">
+function selectionSort(arr) {
+    let len = arr.length;
+    for (let i = 0; i < len - 1; i++) {
+        let minIndex = i;
+        for (let j = i + 1; j < len; j++) {
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
+            }
+        }
+        [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
+    }
+    return arr;
+}
+                </code>
+            </pre>
+        </div>
+        
+        <!-- Python -->
+        <div class="code">
+            <h3>Python</h3>
+            <pre>
+                <code class="language-python">
+def selection_sort(arr):
+    n = len(arr)
+    for i in range(n - 1):
+        min_index = i
+        for j in range(i + 1, n):
+            if arr[j] < arr[min_index]:
+                min_index = j
+        arr[i], arr[min_index] = arr[min_index], arr[i]
+    return arr
+                </code>
+            </pre>
+        </div>
+        
+        <!-- C++ -->
+        <div class="code">
+            <h3>C++</h3>
+            <pre>
+                <code class="language-cpp">
+void selection_sort(int arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        int min_index = i;
+        for (int j = i + 1; j < n; j++) {
+            if (arr[j] < arr[min_index]) {
+                min_index = j;
+            }
+        }
+        swap(arr[i], arr[min_index]);
+    }
+}
+                </code>
+            </pre>
+        </div>
+    </div>
+    
+    <script src="selection.js"></script>
+</body>
+</html>

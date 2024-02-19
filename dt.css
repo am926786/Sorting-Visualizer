@@ -1,0 +1,47 @@
+/* dark-theme.css */
+body {
+    background-color: #2f4454;
+    color: #fff;
+}
+
+h1, h2, h3 {
+    color: #3498db;
+}
+
+.info, .code-section {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.code {
+    margin-bottom: 20px;
+}
+
+.code h3 {
+    color: #e74c3c;
+}
+
+pre {
+    background-color: #2e151b;
+    border: 1px solid #444;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button-container {
+    margin-bottom: 20px;
+}
